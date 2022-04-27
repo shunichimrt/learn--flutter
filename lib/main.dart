@@ -26,11 +26,23 @@ class MyHomePage extends StatelessWidget {
   Widget build(BuildContext context) {
     return  Scaffold(
       body: Center(
-        child: Image.network(
-          "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/25.png",
-          height: 300,
-          width: 300,
-        ),
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            Image.network(
+              "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/25.png",
+              height: 100,
+              width: 100,
+            ),
+            const Text(
+              'pikachu',
+              style: TextStyle(fontSize: 36, fontWeight: FontWeight.bold),
+            ),
+            const Chip(
+              label: Text('electric'),
+              backgroundColor: Colors.yellow,
+            ),
+        ],)
       ),
     );
   }
